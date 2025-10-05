@@ -1,0 +1,40 @@
+@import 'tailwindcss';
+@plugin "daisyui";
+
+@theme {
+  /* fonts */
+  --font-poppins: var(--font-poppins), sans-serif;
+  --font-roboto: var(--font-roboto), sans-serif;
+
+  /* colors */
+  --color-primary-black: #010001;
+  --color-secondary: #3ba334;
+}
+
+@layer base {
+  body {
+    @apply m-0 p-0 box-border font-poppins bg-white;
+  }
+
+  p {
+    @apply text-sm   font-light text-[#E7E8EA];
+  }
+}
+
+@layer components {
+  .heading {
+    @apply text-3xl lg:text-[72px] text-white font-medium;
+  }
+  .subHeading {
+    @apply text-2xl lg:text-[64px] text-white font-medium;
+  }
+  .contain {
+    @apply max-w-[1280px] mx-auto px-4 lg:px-0;
+  }
+  .button {
+    @apply bg-gradient-to-t from-[#6331F1] to-[#6331F1];
+  }
+  /* .button {
+    @apply font-poppins bg-secondary rounded-lg cursor-pointer shadow-[0_8px_16px_0_#39A4323D] hover:scale-105 transition-all duration-300 py-[10px] px-[26px] text-white text-base font-medium;
+  } */
+}
