@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="light">
       <body className={`${outfit.variable} antialiased`}>
-        <main className="max-w-[1440px] mx-auto bg-[#020004]">
+        <main className="max-w-[1600px] mx-auto bg-[#020004]">
           <Navbar />
           {children}
           <Footer />

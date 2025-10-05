@@ -10,6 +10,7 @@ const HeroSection = () => {
       <div className="contain">
         <div className="hero py-16">
           <div className="hero-content flex flex-col lg:flex-row">
+            {/* text content */}
             <div className="lg:max-w-[500px]">
               <div>
                 <h1 className="heading">
@@ -45,6 +46,7 @@ const HeroSection = () => {
               </div>
             </div>
 
+            {/* images */}
             <div className="col-span-3 relative">
               <Image
                 src={hero2}
