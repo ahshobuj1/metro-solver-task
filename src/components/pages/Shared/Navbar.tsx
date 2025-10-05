@@ -1,8 +1,8 @@
 import Image from 'next/image';
-import logo from '@/assets/image/logo.png';
+import logo from '@/assets/image/metro/Frame_1.gif';
 import Link from 'next/link';
 import navIcon1 from '@/assets/image/nav/navIcon1.png';
-import navIcon2 from '@/assets/image/nav/navIcon2.png';
+import {LuShoppingCart} from 'react-icons/lu';
 
 const Navbar = () => {
   const navItems = (
@@ -36,8 +36,8 @@ const Navbar = () => {
   );
 
   return (
-    <div>
-      <div className="navbar shadow-sm bg-gradient-to-r from-[#361A67] to-[#251F40] lg:px-20 py-6 ">
+    <nav>
+      <div className="navbar shadow-sm bg-[#0A111C] lg:px-20">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -66,13 +66,13 @@ const Navbar = () => {
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 text-white">
-            <li className="border-2 border-transparent rounded-full hover:border-white px-4 transition-all duration-300">
+            <li className="border-2 border-transparent rounded-full hover:border-white px-4 transition-all duration-300 text-base">
               <Link href={'/'}>Home</Link>
             </li>
-            <li className="border-2 border-transparent rounded-full hover:border-white px-4 transition-all duration-300">
-              <Link href={'/'}>Home</Link>
+            <li className="border-2 border-transparent rounded-full hover:border-white px-4 transition-all duration-300 text-base">
+              <Link href={'/'}>About us</Link>
             </li>
-            <li className="border-2 border-transparent rounded-full hover:border-white px-4 transition-all duration-300">
+            <li className="border-2 border-transparent rounded-full hover:border-white px-4 transition-all duration-300 text-base">
               <details>
                 <summary>Services</summary>
                 <ul className="w-30 text-black">
@@ -85,10 +85,10 @@ const Navbar = () => {
                 </ul>
               </details>
             </li>
-            <li className="border-2 border-transparent rounded-full hover:border-white px-4 transition-all duration-300">
+            <li className="border-2 border-transparent rounded-full hover:border-white px-4 transition-all duration-300 text-base">
               <Link href={'/'}>White Label</Link>
             </li>
-            <li className="border-2 border-transparent rounded-full hover:border-white px-4 transition-all duration-300">
+            <li className="border-2 border-transparent rounded-full hover:border-white px-4 transition-all duration-300 text-base">
               <Link href={'/'}>Contact US</Link>
             </li>
           </ul>
@@ -97,9 +97,14 @@ const Navbar = () => {
         {/* right items */}
         <div className="navbar-end">
           <div className="flex items-center justify-center gap-6">
-            <div className="avatar">
-              <div className="w-14 h-14 rounded-full ring-2 ring-offset-2 cursor-pointer">
-                <Image src={navIcon2} alt="avatar" width={56} height={56} />
+            <div className="avatar avatar-placeholder">
+              <div className="gradient text-neutral-content w-16 rounded-full cursor-pointer">
+                <div className="relative">
+                  <span className="absolute w-3 h-3 top-1 right-0 text-[10px] bg-red-500 rounded-full flex items-center justify-center">
+                    1
+                  </span>
+                  <LuShoppingCart className="text-3xl" />
+                </div>
               </div>
             </div>
 
@@ -112,7 +117,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    </div>
+    </nav>
   );
 };
 

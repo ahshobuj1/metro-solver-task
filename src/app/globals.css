@@ -3,8 +3,7 @@
 
 @theme {
   /* fonts */
-  --font-poppins: var(--font-poppins), sans-serif;
-  --font-roboto: var(--font-roboto), sans-serif;
+  --font-outfit: var(--font-outfit), sans-serif;
 
   /* colors */
   --color-primary-black: #010001;
@@ -13,7 +12,7 @@
 
 @layer base {
   body {
-    @apply m-0 p-0 box-border font-poppins bg-white;
+    @apply m-0 p-0 box-border font-outfit bg-white;
   }
 
   p {
@@ -22,6 +21,9 @@
 }
 
 @layer components {
+  .gradient {
+    @apply bg-gradient-to-r from-[#361A67] via-[#1B1B31] to-[#361A67];
+  }
   .heading {
     @apply text-3xl lg:text-[72px] text-white font-medium;
   }
