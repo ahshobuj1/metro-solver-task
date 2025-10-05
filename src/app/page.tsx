@@ -1,5 +1,6 @@
 import FeatureMarquee from '@/components/pages/Home/FeatureMarquee';
 import HeroSection from '@/components/pages/Home/HeroSection';
+import HowToWorks from '@/components/pages/Home/HowToWorks';
 import OurLatestWorks from '@/components/pages/Home/OurLatestWorks';
 import OurServices from '@/components/pages/Home/OurServices';
 import Video from '@/components/pages/Home/Video';
@@ -14,6 +15,7 @@ export default function Home() {
       <OurLatestWorks />
       <WhyChooseUs />
       <Video />
+      <HowToWorks />
     </main>
   );
 }
